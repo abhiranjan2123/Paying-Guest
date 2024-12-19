@@ -3,7 +3,7 @@ import React from 'react'
 const ScheduleVisitForm = () => {
   return (
     <>
-     <div className="flex max-w-96 m-20  flex-1 flex-col justify-center px-10 py-10 lg:px-8  shadow-md bg-glassy rounded-3xl">
+     <div className="flex max-w-4xl m-4 flex-1 flex-col justify-center px-14 py-10 lg:px-8 md:px-28 shadow-md bg-glassy rounded-3xl">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           
           <h2 className="mb-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
@@ -23,7 +23,7 @@ const ScheduleVisitForm = () => {
                   name="user_name"
                   type="text"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-500 sm:text-sm/6"
                 />
               </div>
             </div>
@@ -38,7 +38,7 @@ const ScheduleVisitForm = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-500 sm:text-sm/6"
                 />
               </div>
             </div>
@@ -52,7 +52,7 @@ const ScheduleVisitForm = () => {
                   name="user_phone"
                   type="number"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-500  sm:text-sm/6"
                 />
               </div>
             </div>
@@ -67,7 +67,7 @@ const ScheduleVisitForm = () => {
                   name="booking_date"
                   type="datetime-local"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-500  sm:text-sm/6"
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ const ScheduleVisitForm = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-secondary mt-10 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-secondary mt-10 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500 "
               >
                 Book
               </button>

@@ -16,7 +16,7 @@
 .font-text{
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: auto;
   font-style: normal;
 }
 
