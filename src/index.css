@@ -13,6 +13,10 @@
     "width" 100;
 }
 
+.bg-radius{
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% 
+}
+
 .font-text{
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;

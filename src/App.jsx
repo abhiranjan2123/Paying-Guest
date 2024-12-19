@@ -23,13 +23,29 @@ const App = () => {
         </div>
       </div>
       <section>
-        <div className="flex flex-col items-center m-10">
-          <h2 className="text-2xl font-bold">About Us</h2>
-          <p className="text-sm lg:text-lg text-center">
-            The Cozy Luxe is a community of like-minded individuals who value
-            comfort and community. We offer a range of amenities to make your
-            stay as comfortable as possible.
-          </p>
+        <div className="flex flex-col items-center m-10  lg:flex lg:flex-row-reverse gap-10 ">
+     
+
+          <div className="flex flex-col items-center lg:items-start lg:flex">
+            <h2 className="text-2xl font-bold mb-2">About Us</h2>
+            <div className="text-gray-700">
+              <p className="text-sm lg:text-lg text-center lg:text-left">
+                Welcome to The Cozy Luxe, where luxury meets comfort and
+                convenience. We specialize in providing premium, fully-furnished
+                accommodation designed exclusively for women who value
+                sophistication, security, and style.
+              </p>
+
+              <p className="text-sm lg:text-lg text-center lg:text-left">
+                At The Cozy Luxe, we believe that a home away from home should
+                be more than just a place to stay. That’s why we’ve meticulously
+                crafted our spaces to combine elegance and functionality,
+                ensuring our residents experience a lifestyle of unparalleled
+                comfort.
+              </p>
+            </div>
+          </div>
+          <div className="w-full h-64 bg-about bg-cover"></div>
         </div>
       </section>
 
