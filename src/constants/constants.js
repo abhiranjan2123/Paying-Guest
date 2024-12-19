@@ -4,6 +4,7 @@ import WhatsAppImage from '../assets/WhatsApp.svg';
 
 const CompanyName = 'The Cozy Luxe';
 const whatsAppUrl = 'https://wa.me/+919535585524?text=I%20am%20interested%20in%20your%20services';
+const phoneNumberUrl = 'tel:123'; 
 
 
 const NavLinks = [
@@ -26,4 +27,4 @@ const NavLinks = [
 ];
 
 
-export { logo,heroimage,WhatsAppImage, NavLinks , CompanyName,whatsAppUrl };
+export { logo,heroimage,WhatsAppImage, phoneNumberUrl,NavLinks , CompanyName,whatsAppUrl };

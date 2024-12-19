@@ -1,6 +1,6 @@
 import React from "react";
 
-import { logo, NavLinks ,CompanyName } from "../constants/constants";
+import { logo, NavLinks ,CompanyName ,phoneNumberUrl} from "../constants/constants";
 
 const NavBar = () => {
 
@@ -59,7 +59,7 @@ const NavBar = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-bold text-secondary">
+          <a href= {phoneNumberUrl} className="text-sm/6 font-bold text-secondary">
             Call Us <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -67,7 +67,7 @@ const NavBar = () => {
       {/* mobile view */}
       {isMobileMenuOpen && <div className="lg:hidden" role="dialog" aria-modal="true">
         <div className="fixed inset-0 z-50"></div>
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-glassy px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only"></span>
@@ -112,10 +112,10 @@ const NavBar = () => {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href={phoneNumberUrl}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Call us &rarr;
                 </a>
               </div>
             </div>
