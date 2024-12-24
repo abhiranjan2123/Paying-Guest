@@ -12,17 +12,20 @@ const RoomsSection = () => {
 
   
       {
-        RoomTypes.map((item)=>(
-          <div className=" w-full  p-3 flex  justify-center items-center lg:flex-row lg:gap-3 lg:flex">
-          <div className=" h-[550px] p-2 rounded-xl shadow-md relative">
+        RoomTypes.map((item,index)=>(
+          <div key={index} className=" w-full  p-3 px-2 flex  justify-center items-center lg:flex-row lg:gap-3 lg:flex">
+          <div key={index}className=" h-[550px]  rounded-xl shadow-md relative">
             <img
               src={item.image}
               alt=""
-              width="550"
+              width="380px"
               className="object-cover h-2/3 rounded-lg"
             />
-            <div className="flex w-full   font-bold text-4xl">
-              <button>
+            <div key="index" className="flex w-full   font-bold text-4xl">
+              <button
+              name="left"
+              >
+                
                 <p className="absolute top-5 left-3 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +43,9 @@ const RoomsSection = () => {
                   </svg>
                 </p>
               </button>
-              <button>
+              <button
+              name="right"
+              >
                 <p className="absolute top-5 right-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -59,26 +64,26 @@ const RoomsSection = () => {
                 </p>
               </button>
             </div>
-            <div className="flex pb-10">
+            <div className="flex">
   
           
-            <div className="py-5 space-y-3 w-full">
+            <div key={index} className="p-2 space-y-3 w-full">
               <h2 className="text-2xl font-semibold text-secondary">
                 {item.sharing} <span className="text-black">Sharing </span>
               </h2>
               <p className="text-xs font-semibold inline-block"> <span className="text-secondary">{item.beds}</span> Bed | <span className="text-secondary">{item.washroom}</span> Attached Bathroom | 1 Ironbox</p>
-              <div className="flex flex-col gap-3  ">
-              <hr className="bg-black"/>
+              <div key={index} className="flex flex-col gap-3  ">
+              <hr className="bg-gray-400 h-[2px]" />
               <p className="font-bold">Starts from : &#8377; {item.price} -/mo </p>
   
               </div>
             
             </div>
            
-            <div className="absolute bottom-0 right-0 flex flex-row gap-1 font-bold ">
+            <div key={index} className="absolute bottom-0 right-0 flex flex-row gap-1 font-bold ">
             
               <button className="bg-secondary p-3  rounded-tl-xl ">
-                <div className="flex justify-center items-center gap-2  hover:text-white">
+                <div key={index} className="flex justify-center items-center gap-2  hover:text-white">
                   <p>Book Now</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +99,7 @@ const RoomsSection = () => {
                   </svg>
                 </div>
               </button>
-              <button className="bg-primary p-3  rounded-tr-xl ">
+              <button className="bg-white p-3  rounded-tr-xl ">
                 <div className="flex justify-center items-center gap-2 hover:text-secondary">
                   <p>Know More</p>
                   <svg

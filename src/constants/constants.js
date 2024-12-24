@@ -56,22 +56,22 @@ const GalleryImages =[
   alt:'image2'
 }
 ,{
-  id:1,
+  id:3,
   src:image3,
   alt:'image1'
 },
 {
-  id:1,
+  id:4,
   src:image1,
   alt:'image1'
 },
 {
-  id:2,
+  id:5,
   src:image2,
   alt:'image2'
 }
 ,{
-  id:3,
+  id:6,
   src:image3,
   alt:'image3'
 },

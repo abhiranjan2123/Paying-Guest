@@ -63,9 +63,9 @@ const LocationSection = () => {
             <iframe
               className="w-full h-full aspect-square  p-2 rounded-[30px]"
               src={GoogleMapLink}
-              allowfullscreen=""
+              allowFullScreen="yes"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
