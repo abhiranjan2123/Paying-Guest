@@ -1,14 +1,17 @@
 import React from "react";
 
-import { logo, NavLinks ,CompanyName ,phoneNumberUrl} from "../constants/constants";
+import {
+  logo,
+  NavLinks,
+  CompanyName,
+  phoneNumberUrl,
+} from "../constants/constants";
 
 const NavBar = () => {
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-
   };
 
   return (
@@ -24,6 +27,12 @@ const NavBar = () => {
           </a>
         </div>
         <div className="flex lg:hidden">
+          {/* <a
+            href={phoneNumberUrl}
+            className="text-sm/6 font-bold text-secondary pr-5"
+          >
+            Call Us <span aria-hidden="true">&rarr;</span>
+          </a> */}
           <button
             onClick={handleMobileMenuToggle}
             type="button"
@@ -59,69 +68,74 @@ const NavBar = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href= {phoneNumberUrl} className="text-sm/6 font-bold text-secondary">
+          <a
+            href={phoneNumberUrl}
+            className="text-sm/6 font-bold text-secondary"
+          >
             Call Us <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
       {/* mobile view */}
-      {isMobileMenuOpen && <div className="lg:hidden" role="dialog" aria-modal="true">
-        <div className="fixed inset-0 z-50"></div>
-        <div className="fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-glassy px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only"></span>
-              <img
-                className="h-8 w-auto"
-                src={logo}
-                alt="logo"
-              />
-            </a>
-            
-            <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={handleMobileMenuToggle}>
-              <span className="sr-only">Close menu</span>
-              <svg
-                className="size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
+      {isMobileMenuOpen && (
+        <div className="lg:hidden" role="dialog" aria-modal="true">
+          <div className="fixed inset-0 z-50"></div>
+          <div className="fixed inset-y-0 right-0 z-50 w-1/2 overflow-y-auto bg-glassy px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only"></span>
+                <img className="h-8 w-auto" src={logo} alt="logo" />
+              </a>
+
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={handleMobileMenuToggle}
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {NavLinks.map((link) => (
+                <span className="sr-only">Close menu</span>
+                <svg
+                  className="size-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {NavLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="py-6">
                   <a
-                  key={link.name}
-                    href={link.href}
+                    href={phoneNumberUrl}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    {link.name}
+                    Call us &rarr;
                   </a>
-                ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href={phoneNumberUrl}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Call us &rarr;
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>}
+      )}
     </header>
   );
 };

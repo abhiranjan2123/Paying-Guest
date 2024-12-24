@@ -15,7 +15,34 @@ import whatsapp from "../assets/socialMedia/whatsapp.svg"
 import twitter from "../assets/socialMedia/twitter.svg"
 import instagram from "../assets/socialMedia/instagram.svg"
 
-
+const GoogleMapLink = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15554.272443165904!2d77.63219245!3d12.93545675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144ed898fc2d%3A0x1681f38e8c00ae56!2sKoramangala%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1735042171869!5m2!1sen!2sin" ;
+const Amenties = [
+  "Free Wi-Fi",
+  "Swimming Pool",
+  "Gym",
+  "Spa",
+  "Restaurant",
+  "Bar",
+  "Room Service",
+  "Laundry Service",
+  "Parking",
+  "Airport Shuttle",
+  "Pet Friendly",
+  "Non-Smoking Rooms",
+  "Family Rooms",
+  "Facilities for Disabled Guests",
+  "24-Hour Front Desk",
+  "Daily Housekeeping",
+  "Meeting/Banquet Facilities",
+  "Business Center",
+  "Concierge Service",
+  "Luggage Storage",
+  "Safety Deposit Box",
+  "Air Conditioning",
+  "Heating",
+  "Elevator",
+  "Garden"
+];
 
 const GalleryImages =[
 {
@@ -55,15 +82,17 @@ const RoomTypes = [
   {
     id:1,
     image:image1,
-    sharing:'Single Sharing',
-    Amenties:["Attached Washroom",'Study Table','Geyser'],
+    sharing:'Single',
+    beds:1,
+    washroom:1,
     price:25000
   },
   {
     id:2,
     image:image2,
-    sharing:'Double Sharing',
-    Amenties:["Attached Washroom",'Study Table'],
+    sharing:'Double',
+    beds:2,
+    washroom:1,
     price:15000
   },
   // {
@@ -107,4 +136,4 @@ const NavLinks = [
 ];
 
 
-export { logo,heroimage,WhatsAppImage,facebook,twitter,instagram,whatsapp,AboutUs, GalleryImages, phoneNumberUrl,NavLinks , CompanyName,whatsAppUrl ,RoomTypes};
+export { GoogleMapLink,logo,heroimage,WhatsAppImage,facebook,twitter,instagram,whatsapp,AboutUs, Amenties,GalleryImages, phoneNumberUrl,NavLinks , CompanyName,whatsAppUrl ,RoomTypes};

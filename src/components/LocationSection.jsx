@@ -1,29 +1,33 @@
-import React from "react";
+import { GoogleMapLink } from "../constants/constants";
 
 const LocationSection = () => {
   return (
-    <section>
-      <div className="px-10 flex flex-col gap-10 mb-10">
-        <div>
-          <p className="text-heading text-center">Location</p>
-        </div>
-        <div class="flex flex-col gap-10 lg:flex-row lg:justify-between lg:items-center ">
-          <div className="flex-initial bg-secondary  p-5 rounded-xl w-full h-full ">
-            <div className="flex flex-row gap-4 flex-wrap">
-            <div className="flex flex-col justify-start items-start p-1  bg-white rounded-lg">
+    <section className="mt-8 ">
+      <h2 className="location text-3xl font-semibold text-center  pt-6">
+        Perfectly Located
+      </h2>
+      <p className="text-center mb-5">
+      Step into a room that has
+        <span className="text-secondary"> room for </span> everything
+      </p>
+
+      <div className="px-2  mb-10 mt-10">
+        <div class="flex flex-col gap-1 lg:flex-row lg:justify-between lg:items-center ">
+          <div className="flex-initial bg-secondary   rounded-xl w-full h-full p-2 lg:py-12 ">
+            <div className="flex flex-row  flex-wrap  ">
+              <div className="flex flex-col justify-start items-start p-3  bg-primary shadow-2xl rounded-lg">
                 <p className="text-md font-semibold">Mail Us</p>
-                <p className="truncate">thecozyluxe.gmail.com</p>
-            </div>
-            <div className="flex flex-col justify-start items-start  rounded-lg ">
+                <a href="" className="truncate">
+                  thecozyluxe.gmail.com
+                </a>
+              </div>
+              <div className="flex flex-col justify-start items-start  rounded-lg p-3 pl-4">
                 <p className="text-md font-semibold">Call Us</p>
                 <p className="text-sm">+919535585524</p>
+              </div>
             </div>
-          
-            </div>
-            
 
-            <div className="flex flex-col justify-start items-start bg-white p-5 rounded-lg  mt-2 ">
-          
+            <div className="flex flex-col justify-start items-start bg-primary shadow-2xl p-5 rounded-lg  mt-4 ">
               <p className="text-gray-500    ">
                 The Cozy Luxe
                 <br />
@@ -32,16 +36,33 @@ const LocationSection = () => {
                 <br />
                 Phone - 09441640280
               </p>
-              <button className="bg-secondary text-white mt-5 rounded-md p-2">
-                Get Directions
+              <button
+                className="bg-primary p-3 mt-3 rounded-tr-xl "
+                onClick={() => {
+                  window.open(
+                     "https://maps.app.goo.gl/F4iKsPf9G4HJzeZp9"
+                    );
+                   
+                }}
+              >
+                <div className="flex justify-center items-center gap-2 hover:text-secondary">
+                  <p>Get Direction</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-6"
+                  >
+                    <path d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
+                  </svg>
+                </div>
               </button>
             </div>
-
           </div>
-          <div className="w-full bg-white h-72 ">
+          <div className="w-full bg-primary shadow-2xl h-[354px] rounded-xl ">
             <iframe
               className="w-full h-full aspect-square  p-2 rounded-[30px]"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9912315340544!2d77.68189117330213!3d12.90828491626687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae134e4d60a137%3A0x950c0b7c73b7f4de!2sSSV%20COMFORTS%20CO-LIVING%20ACCOMODATION!5e0!3m2!1sen!2sin!4v1734423847795!5m2!1sen!2sin"
+              src={GoogleMapLink}
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"

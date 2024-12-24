@@ -7,6 +7,8 @@ import GallerySection from "./components/GallerySection";
 import RoomsSection from "./components/RoomsSection";
 import LocationSection from "./components/LocationSection";
 import Footer from "./components/Footer";
+import AmentiesScroll from "./components/AmentiesScroll";
+import SmallInfoSection from "./components/SmallInfoSection";
 
 
 
@@ -17,7 +19,9 @@ const App = () => {
       <HeroSection/>
       <AboutUs />
       <GallerySection />
+      <AmentiesScroll />
       <RoomsSection />
+      <SmallInfoSection/>
       <LocationSection/>
       <Footer />
 

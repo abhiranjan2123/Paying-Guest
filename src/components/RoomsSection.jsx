@@ -1,60 +1,127 @@
-import { RoomTypes } from "../constants/constants";
-
+import { heroimage,RoomTypes } from "../constants/constants";
 const RoomsSection = () => {
   return (
     <section>
-      <div className="pb-10">
-        <div className="px-10  bg-secondary">
-          <p className="text-heading text-center"> Room Types</p>
-        </div>
-        <div className="flex gap-x-10 overflow-x-auto px-10 no-scrollbar">
-          {RoomTypes.map((item, index) => (
-            <div className="mt-6 w-full flex justify-center ">
-              <div className="w-96 h-72 bg-white rounded-3xl lg:w-96 lg:h-60 ">
-                <div className="flex flex-row h-full">
-                  <div className=" w-1/2 p-3">
-                    <img
-                      src={item.image}
-                      alt="room"
-                      className="w-52 h-full rounded-xl object-cover flex-shrink-0"
-                    />
-                  </div>
-                  <div className="flex flex-col space-y-3 p-4 items-baseline">
-                    <p className="font-semibold text-xs  truncate">
-                      {item.sharing}
-                    </p>
-                    <div className="flex flex-col gap-y-2">
-                    {item.Amenties.map((i, k) => (
-                      
-                      <p className="min-w-full bg-gray-400 rounded-3xl text-white text-center p-2 text-xs">
-                        {i}
-                      </p>
-                   
-                  ))}
-                    </div>
-                  
-                  <div className="">
-                  <p className="text-xs font-bold ">
-                      Starts From <code> &#8377;</code>
-                      {item.price} /mo
-                    </p>
-               
-                  </div>
-                  <button className=" bg-secondary rounded-lg p-2">
-                      <p>Book Now</p>
-                    </button>
-                  </div>
+      <h2 className="text-3xl font-semibold text-center">Room Details</h2>
+      <p className="text-center mb-5">
+        Diverse <span className="text-secondary">Living Options </span> for
+        Every Lifestyle
+      </p>
 
-                 
-                  
-                </div>
-            
-              </div>
-              
+    <div className="flex flex-col lg:flex-row h-full lg:h-[600px]">
+
+  
+      {
+        RoomTypes.map((item)=>(
+          <div className=" w-full  p-3 flex  justify-center items-center lg:flex-row lg:gap-3 lg:flex">
+          <div className=" h-[550px] p-2 rounded-xl shadow-md relative">
+            <img
+              src={item.image}
+              alt=""
+              width="550"
+              className="object-cover h-2/3 rounded-lg"
+            />
+            <div className="flex w-full   font-bold text-4xl">
+              <button>
+                <p className="absolute top-5 left-3 ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+                    />
+                  </svg>
+                </p>
+              </button>
+              <button>
+                <p className="absolute top-5 right-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </p>
+              </button>
             </div>
-          ))}
+            <div className="flex pb-10">
+  
+          
+            <div className="py-5 space-y-3 w-full">
+              <h2 className="text-2xl font-semibold text-secondary">
+                {item.sharing} <span className="text-black">Sharing </span>
+              </h2>
+              <p className="text-xs font-semibold inline-block"> <span className="text-secondary">{item.beds}</span> Bed | <span className="text-secondary">{item.washroom}</span> Attached Bathroom | 1 Ironbox</p>
+              <div className="flex flex-col gap-3  ">
+              <hr className="bg-black"/>
+              <p className="font-bold">Starts from : &#8377; {item.price} -/mo </p>
+  
+              </div>
+            
+            </div>
+           
+            <div className="absolute bottom-0 right-0 flex flex-row gap-1 font-bold ">
+            
+              <button className="bg-secondary p-3  rounded-tl-xl ">
+                <div className="flex justify-center items-center gap-2  hover:text-white">
+                  <p>Book Now</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <button className="bg-primary p-3  rounded-tr-xl ">
+                <div className="flex justify-center items-center gap-2 hover:text-secondary">
+                  <p>Know More</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          </div>
+  
         </div>
-      </div>
+        ))
+      }
+  </div>
+    
     </section>
   );
 };
