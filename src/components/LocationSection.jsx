@@ -37,7 +37,7 @@ const LocationSection = () => {
                 Phone - 09441640280
               </p>
               <button
-                className="bg-primary p-3 mt-3 rounded-tr-xl "
+                className="ring-1 ring-[#c1a516] p-3 mt-3 rounded-tr-xl "
                 onClick={() => {
                   window.open(
                      "https://maps.app.goo.gl/F4iKsPf9G4HJzeZp9"

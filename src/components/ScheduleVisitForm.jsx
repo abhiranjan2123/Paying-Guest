@@ -123,7 +123,7 @@ const ScheduleVisitForm = () => {
               <button
                 type="submit"
                 value="Send"
-                className="flex w-full justify-center rounded-md bg-secondary mt-10 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500 "
+                className="flex w-full justify-center rounded-md bg-secondary mt-10 px-3 py-1.5 text-sm/6 font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500 "
               >
                 Book
               </button>
