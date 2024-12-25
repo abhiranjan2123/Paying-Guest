@@ -2,6 +2,7 @@ import logo from '../assets/logo.svg';
 import heroimage from '../assets/hero-image.svg';
 import WhatsAppImage from '../assets/WhatsApp.svg';
 import AboutUs from '../assets/aboutus-image.svg'
+import HeroImage2 from '../assets/Hero-Image2.webp'
 
 // gallery images import
 import image1 from "../assets/gallery/image1.svg"
@@ -81,7 +82,7 @@ const RoomTypes = [
 
   {
     id:1,
-    image:image1,
+    image:[HeroImage2,image1,image3],
     sharing:'Single',
     beds:1,
     washroom:1,
@@ -89,7 +90,7 @@ const RoomTypes = [
   },
   {
     id:2,
-    image:image2,
+    image:[HeroImage2,image3,image2,image1],
     sharing:'Double',
     beds:2,
     washroom:1,

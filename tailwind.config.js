@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports =withMT( {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('./assets/hero-image.svg')",
+        'hero': "url('./assets/Hero-Image2.webp')",
         'about': "url('./assets/aboutus-image.svg')",
       },
       animation: {
@@ -22,4 +24,4 @@ export default {
     },
   },
   plugins: [],
-}
+});

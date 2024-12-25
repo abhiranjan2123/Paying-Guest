@@ -1,4 +1,7 @@
-import { heroimage,RoomTypes } from "../constants/constants";
+import { RoomTypes } from "../constants/constants";
+import { CarouselCustomNavigation } from "./Carousel";
+import {BoltIcon,ArrowRightIcon} from '@heroicons/react/24/solid'
+
 const RoomsSection = () => {
   return (
     <section>
@@ -8,125 +11,40 @@ const RoomsSection = () => {
         Every Lifestyle
       </p>
 
-    <div className="flex flex-col lg:flex-row h-full lg:h-[600px]">
+      <div className=" p-4 flex flex-col items-center gap-3 lg:flex-row">
 
-  
-      {
-        RoomTypes.map((item,index)=>(
-          <div key={index} className=" w-full  p-3 px-2 flex  justify-center items-center lg:flex-row lg:gap-3 lg:flex">
-          <div key={index}className=" h-[550px]  rounded-xl shadow-md relative">
-            <img
-              src={item.image}
-              alt=""
-              width="380px"
-              className="object-cover h-2/3 rounded-lg"
-            />
-            <div key="index" className="flex w-full   font-bold text-4xl">
-              <button
-              name="left"
-              >
-                
-                <p className="absolute top-5 left-3 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
-                    />
-                  </svg>
-                </p>
-              </button>
-              <button
-              name="right"
-              >
-                <p className="absolute top-5 right-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </p>
-              </button>
-            </div>
-            <div className="flex">
-  
-          
-            <div key={index} className="p-2 space-y-3 w-full">
-              <h2 className="text-2xl font-semibold text-secondary">
-                {item.sharing} <span className="text-black">Sharing </span>
-              </h2>
-              <p className="text-xs font-semibold inline-block"> <span className="text-secondary">{item.beds}</span> Bed | <span className="text-secondary">{item.washroom}</span> Attached Bathroom | 1 Ironbox</p>
-              <div key={index} className="flex flex-col gap-3  ">
-              <hr className="bg-gray-400 h-[2px]" />
-              <p className="font-bold">Starts from : &#8377; {item.price} -/mo </p>
-  
-              </div>
-            
-            </div>
-           
-            <div key={index} className="absolute bottom-0 right-0 flex flex-row gap-1 font-bold ">
-            
-              <button className="bg-secondary p-3  rounded-tl-xl ">
-                <div key={index} className="flex justify-center items-center gap-2  hover:text-white">
-                  <p>Book Now</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </button>
-              <button className="bg-white p-3  rounded-tr-xl ">
-                <div className="flex justify-center items-center gap-2 hover:text-secondary">
-                  <p>Know More</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </div>
+        {
+          RoomTypes.map((item)=>(
+<div className="w-full h-full bg-primary shadow-2xl rounded-xl">
+          <div className="relative h-full w-full">
+            <CarouselCustomNavigation images={item.image} />
           </div>
+          <div className="flex flex-col p-4 gap-3">
+            <h1 className="text-2xl font-semibold">
+              <span className="text-secondary">{item.sharing}</span> Sharing{" "}
+            </h1>
+            <p className="text-sm "> 
+              <span className="text-secondary">{item.beds}</span> Bed | <span className="text-secondary">{item.washroom}</span>
+              Attached Bathroom | <span className="text-secondary">1</span> Ironbox
+            </p>
+            <hr className="bg-gray-600" height="2px" />
+            <h6 className="font-bold">Starts From  &#8377;  <span className="text-secondary">{item.price}</span> - / Mo </h6>
+
           </div>
-  
+          <div className="flex flex-row justify-end flex-nowrap  font-bold">
+            <div className="flex flex-row flex-nowrap"> 
+            <button className="bg-secondary p-4 rounded-tl-lg">Book Now <BoltIcon className="inline-block w-5 h-5"/> </button>
+            <button className="bg-white p-4 rounded-tr-lg">Know More <ArrowRightIcon className="w-5 h-5 inline-block"/></button>
+            </div>
+      
+          </div>
         </div>
-        ))
-      }
-  </div>
-    
+
+          ))
+
+        }
+        
+      </div>
     </section>
   );
 };

@@ -16,14 +16,15 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <HeroSection/>
+      <HeroSection />
       <AboutUs />
       <GallerySection />
       <AmentiesScroll />
       <RoomsSection />
-      <SmallInfoSection/>
-      <LocationSection/>
+      <SmallInfoSection />
+      <LocationSection />
       <Footer />
+      {/* <ProfileCard/> */}
 
       {/* Fix Icons */}
       <BookVisitFixedIcon />
