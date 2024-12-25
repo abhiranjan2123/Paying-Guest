@@ -3,6 +3,8 @@ import { Carousel } from "@material-tailwind/react";
 export function CarouselCustomNavigation(props) {
   return (
     <Carousel
+    autoplay={true}
+    loop={true}
       className="rounded-xl"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">

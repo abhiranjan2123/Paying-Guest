@@ -1,25 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.font-playfair {
-  font-family: "Playfair", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-variation-settings: "width" 100;
-}
+
 
 .bg-radius {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-.font-text {
-  font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: normal;
 }
 
 .bg-glassy {
